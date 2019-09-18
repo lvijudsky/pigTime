@@ -19,6 +19,10 @@ Route::get('/cadastrar', function(){
     return view('admin.cadastrar');
 });
 
+Route::get('/login', function() {
+    return view('admin.login');
+});
+
 Route::get('/perfil', function(){
     return view('admin.perfil');
 });
