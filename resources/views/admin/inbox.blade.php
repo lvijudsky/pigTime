@@ -40,7 +40,7 @@
         <header class="topbar">
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{url('index.html')}}">
+                    <a class="navbar-brand" href="/">
                             <img src="./admin/assets/images/logo-pig-icon.png" alt="homepage" class="light-logo" />
                         </b>
                 <span>

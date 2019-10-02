@@ -33,6 +33,7 @@ Route::get('/inbox', function(){
     return view('admin.inbox');
 });
 
+<<<<<<< HEAD
 Route::post('/register', function(){
     return view('admin.inbox');
 });
@@ -45,3 +46,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+=======
+Route::get('/servicos', function(){
+    return view('admin.perfil-servico');
+});
+>>>>>>> ale
