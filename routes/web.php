@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\Auth\RegisterController;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -30,3 +32,11 @@ Route::get('/perfil', function(){
 Route::get('/inbox', function(){
     return view('admin.inbox');
 });
+
+Route::post('/register', function(){
+    return view('admin.inbox');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

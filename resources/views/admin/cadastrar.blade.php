@@ -88,18 +88,7 @@
         </aside>
         <div class="page-wrapper">
             <div class="container-fluid">
-                <div class="row page-titles">
-                    <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Painel administrativo</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-7 col-4 align-self-center">
-                        <a href="#" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Anunciar serviço</a>
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -340,8 +329,12 @@
                                             <label for="checkbox1"> Lembrar </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                                    <form action="{{ route('register') }}" method="post">
+                                        <div class="form-group">
+                                            <button type="submit" name="enviar" class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
+                                            <button type="submit" name="cancelar" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
+                                        </div>
+                                    </form>
                                 </form>
                             </div>
                         </div>
