@@ -192,25 +192,25 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="senha">Senha</label>
+                                            <label for="password">Senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="senha">Repetir senha</label>
+                                            <label for="password">Repetir senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Repetir senha">
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Repetir senha">
                                             </div>
                                         </div>
                                     </div>
