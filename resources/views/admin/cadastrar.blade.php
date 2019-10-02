@@ -40,7 +40,7 @@
         <header class="topbar">
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <img src="{{url('./admin/assets/images/logo-pig-icon.png')}}" alt="homepage" class="light-logo" />
                         </b>
                         <img src="{{url('./admin/assets/images/logo-pig-time.png')}}" class="light-logo" alt="homepage" /></span>
@@ -99,57 +99,57 @@
 
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="exampleInputuname">Nome</label>
+                                            <label for="nome">Nome</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-user"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Nome">
+                                                <input type="text" class="form-control" id="nameInput" name="nome" placeholder="Nome">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
-                                            <label for="exampleInputuname">Sobrenome</label>
+                                            <label for="sobrenome">Sobrenome</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-user"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Sobrenome">
+                                                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <div class="col-sm-5">
-                                            <label for="exampleInputuname">RG</label>
+                                            <label for="rg">RG</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                             <i class="ti-user"></i>
                                                         </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="RG">
+                                                <input type="text" class="form-control" id="rg" name="rg" placeholder="RG">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-5">
-                                            <label for="exampleInputuname">CPF</label>
+                                            <label for="cpf">CPF</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                             <i class="ti-user"></i>
                                                         </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="CPF">
+                                                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-2">
-                                            <label for="exampleInputuname">Sexo</label>
+                                            <label for="sexo">Sexo</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
@@ -168,85 +168,85 @@
 
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="exampleInputEmail1">E-mail</label>
+                                            <label for="email">E-mail</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-email"></i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="exampleInputEmail1">Repetir e-mail</label>
+                                            <label for="email">Repetir e-mail</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-email"></i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Repetir e-mail">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Repetir e-mail">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="pwd1">Senha</label>
+                                            <label for="senha">Senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="pwd1" placeholder="Senha">
+                                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="pwd2">Repetir senha</label>
+                                            <label for="senha">Repetir senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="pwd2" placeholder="Repetir senha">
+                                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Repetir senha">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="address-1">Endereço</label>
+                                            <label for="endereco">Endereço</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="address-1" placeholder="Av, Rua...">
+                                                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Av, Rua...">
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
-                                            <label for="address-2">N°</label>
+                                            <label for="numero">N°</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="address-2" placeholder="N°">
+                                                <input type="text" class="form-control" id="numero" name="numero" placeholder="N°">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
-                                            <label for="address-3">Complemento</label>
+                                            <label for="complemento">Complemento</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="address-3" placeholder="Ap, BL, Cj...">
+                                                <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Ap, BL, Cj...">
                                             </div>
                                         </div>
                                     </div>
@@ -260,7 +260,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                                                <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
                                             </div>
                                         </div>
                                         <div class="col-sm-5">
@@ -271,7 +271,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                                                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
@@ -282,32 +282,32 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="uf" placeholder="UF">
+                                                <input type="text" class="form-control" id="uf" name="uf" placeholder="UF">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="tel-1">Telefone 1</label>
+                                            <label for="telefone_1">Telefone 1</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-mobile"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="tel-1" placeholder="Telefone 1">
+                                                <input type="text" class="form-control" id="telefone_1" name="telefone_1" placeholder="Telefone 1">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="tel-2">Telefone 2</label>
+                                            <label for="telefone_2">Telefone 2</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-mobile"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="tel-2" placeholder="Telefone 2">
+                                                <input type="text" class="form-control" id="telefone_2" name="telefone_2" placeholder="Telefone 2">
                                             </div>
                                         </div>
                                     </div>
