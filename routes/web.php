@@ -37,6 +37,11 @@ Route::post('/register', function(){
     return view('admin.inbox');
 });
 
+Route::get('/servicos', function(){
+    return view('admin.servicos');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
