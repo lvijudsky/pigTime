@@ -30,3 +30,7 @@ Route::get('/perfil', function(){
 Route::get('/inbox', function(){
     return view('admin.inbox');
 });
+
+Route::get('/servicos', function(){
+    return view('admin.perfil-servico');
+});
