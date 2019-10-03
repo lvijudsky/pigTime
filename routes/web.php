@@ -33,10 +33,13 @@ Route::get('/inbox', function(){
     return view('admin.inbox');
 });
 
+<<<<<<< HEAD
 Route::post('/register', function(){
     return view('admin.inbox');
 });
 
+=======
+>>>>>>> master
 Route::get('/servicos', function(){
     return view('admin.servicos');
 });
