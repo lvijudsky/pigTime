@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('cpf');
             $table->enum('sexo', ['m','f','o']);
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('endereco');
             $table->string('numero');
