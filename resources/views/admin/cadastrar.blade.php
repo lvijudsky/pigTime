@@ -50,8 +50,6 @@
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
                         <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
                         </li>
                     </ul>
                     <ul class="navbar-nav my-lg-0">
@@ -95,8 +93,8 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
-                                <form class="form p-t-20">
-
+                                <form class="form p-t-20" action="{{ route('register') }}" method="post">
+                                    @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <label for="nome">Nome</label>
@@ -199,7 +197,7 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                                                <input type="password" class="form-control" id="senha" name="password" placeholder="Senha">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -210,7 +208,7 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Repetir senha">
+                                                <input type="password" class="form-control" id="senha" name="password" placeholder="Repetir senha">
                                             </div>
                                         </div>
                                     </div>
@@ -314,10 +312,8 @@
 
                                     <div class="form-group row">
                                         <div class="col-sm-2">
-                                            <form action="" method="post" enctype="multipart/form-data">
                                                 <label for="fileToUpload">Carregar foto</label>
                                                 <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
-                                            </form>
                                         </div>
                                         <div class="col-sm-5">
                                         </div>
@@ -329,12 +325,12 @@
                                             <label for="checkbox1"> Lembrar </label>
                                         </div>
                                     </div>
-                                    <form action="{{ route('register') }}" method="post">
-                                        <div class="form-group">
-                                            <button type="submit" name="enviar" class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
-                                            <button type="submit" name="cancelar" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
-                                        </div>
-                                    </form>
+                                   
+                                    <div class="form-group">
+                                        <button type="submit" name="enviar" class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
+                                        <button type="submit" name="cancelar" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
+                                    </div>
+                                    
                                 </form>
                             </div>
                         </div>

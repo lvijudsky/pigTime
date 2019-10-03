@@ -63,10 +63,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        /*
         return User::create([
             //'name' => $data['name'],
             //'email' => $data['email'],
-            //'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password']),
             //'id' => $data['id'],
             'nome' => $data['nome'],
             'sobrenome' => $data['sobrenome'],
@@ -75,15 +76,17 @@ class RegisterController extends Controller
             'sexo' => $data['sexo'],
             'email' => $data['email'],
             //$table->timestamp('email_verified_at')->nullable();
-            'password' => $data['password'],
+            //'password' => $data['password'],
             'endereco' => $data['endereco'],
             'numero' => $data['numero'],
             'complemento' => $data['complemento'],
             'bairro' => $data['bairro'],
             'cidade' => $data['cidade'],
             'uf' => $data['uf'],
-            'telefone-1' => $data['telefone-1'],
-            'telefone-2' => $data['telefone-2']
+            'telefone_1' => $data['telefone_1'],
+            'telefone_2' => $data['telefone_2']
         ]);
+        */
+        echo 'oioi';
     }
 }
