@@ -59,7 +59,7 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
-                                <form class="form p-t-20" action="/register" method="post">
+                                <form class="form p-t-20" action="/regUser" method="post">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
@@ -156,25 +156,25 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <label for="password">Senha</label>
+                                            <label for="senha">Senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+                                                <input type="password" class="form-control" id="senha" name="password" placeholder="Senha">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="password">Repetir senha</label>
+                                            <label for="senha">Repetir senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="Repetir senha">
+                                                <input type="password" class="form-control" id="senha" name="passwordConf" placeholder="Repetir senha">
                                             </div>
                                         </div>
                                     </div>
@@ -293,8 +293,8 @@
                                     </div>
                                    
                                     <div class="form-group">
-                                        <button  class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
-                                        <button  class="btn btn-inverse waves-effect waves-light">Cancelar</button>
+                                        <button type="submit" name="enviar" class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
+                                        <button type="submit" name="cancelar" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
                                     </div>
                                     
                                 </form>
