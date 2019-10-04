@@ -59,11 +59,7 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
-<<<<<<< HEAD
                                 <form class="form p-t-20" action="/register" method="post">
-=======
-                                <form class="form p-t-20" action="/regUser" method="post">
->>>>>>> master
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
