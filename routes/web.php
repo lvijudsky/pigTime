@@ -18,11 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/cadastrar', function(){
-    return view('admin.cadastrar');
+    return view('cadastrar');
 });
 
 Route::get('/login', function() {
-    return view('admin.login');
+    return view('login');
 });
 
 Route::get('/perfil', function(){
@@ -36,6 +36,7 @@ Route::get('/inbox', function(){
 Route::get('/servicos', function(){
     return view('admin.servicos');
 });
+
 
 Route::post('/regUser','Auth\RegisterController@create');
 
