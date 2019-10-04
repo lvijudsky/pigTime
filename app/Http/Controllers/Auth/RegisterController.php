@@ -64,31 +64,6 @@ class RegisterController extends Controller
      */
     protected function create(Request $data)
     {
-<<<<<<< HEAD
-        
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'id' => $data['id'],
-            'nome' => $data['nome'],
-            'sobrenome' => $data['sobrenome'],
-            'rg' => $data['rg'],
-            'cpf' => $data['cpf'],
-            'sexo' => $data['sexo'],
-            'email' => $data['email'],
-            // $table->timestamp('email_verified_at')->nullable();
-            'password' => $data['password'],
-            'endereco' => $data['endereco'],
-            'numero' => $data['numero'],
-            'complemento' => $data['complemento'],
-            'bairro' => $data['bairro'],
-            'cidade' => $data['cidade'],
-            'uf' => $data['uf'],
-            'telefone_1' => $data['telefone_1'],
-            'telefone_2' => $data['telefone_2']
-        ]);
-=======
         $user = new User;
         $user->nome = $data->nome;
         $user->sobrenome = $data->sobrenome;
@@ -107,6 +82,5 @@ class RegisterController extends Controller
         $user->telefone_2 = $data->telefone_2;
         $user->save();
         return redirect('/');
->>>>>>> master
     }
 }

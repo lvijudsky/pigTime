@@ -178,11 +178,7 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-<<<<<<< HEAD
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="Repetir senha">
-=======
-                                                <input type="password" class="form-control" id="senha" name="passwordConf" placeholder="Repetir senha">
->>>>>>> master
                                             </div>
                                         </div>
                                     </div>
