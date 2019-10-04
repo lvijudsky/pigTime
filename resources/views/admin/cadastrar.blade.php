@@ -59,7 +59,11 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
+<<<<<<< HEAD
                                 <form class="form p-t-20" action="/register" method="post">
+=======
+                                <form class="form p-t-20" action="/regUser" method="post">
+>>>>>>> master
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
@@ -122,9 +126,9 @@
                                                 </div>
                                                 <select name="sexo" id="sexo" class="form-control">
                                                     <option value="sexo" selected disabled hidden>Sexo</option>
-                                                    <option value="masculino">Masculino</option>
-                                                    <option value="feminino">Feminino</option>
-                                                    <option value="outro">Outro</option>
+                                                    <option value="m">Masculino</option>
+                                                    <option value="f">Feminino</option>
+                                                    <option value="o">Outro</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -150,7 +154,7 @@
                                                         <i class="ti-email"></i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Repetir e-mail">
+                                                <input type="email" class="form-control" id="email" name="emailConf" placeholder="Repetir e-mail">
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +178,11 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
+<<<<<<< HEAD
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="Repetir senha">
+=======
+                                                <input type="password" class="form-control" id="senha" name="passwordConf" placeholder="Repetir senha">
+>>>>>>> master
                                             </div>
                                         </div>
                                     </div>

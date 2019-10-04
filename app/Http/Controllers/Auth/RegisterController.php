@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -61,8 +62,9 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(Request $data)
     {
+<<<<<<< HEAD
         
         return User::create([
             'name' => $data['name'],
@@ -86,5 +88,25 @@ class RegisterController extends Controller
             'telefone_1' => $data['telefone_1'],
             'telefone_2' => $data['telefone_2']
         ]);
+=======
+        $user = new User;
+        $user->nome = $data->nome;
+        $user->sobrenome = $data->sobrenome;
+        $user->rg = $data->rg;
+        $user->cpf = $data->cpf;
+        $user->sexo = $data->sexo;
+        $user->email = $data->email;
+        $user->password = Hash::make($data->password);
+        $user->endereco = $data->endereco;
+        $user->numero = $data->numero;
+        $user->complemento = $data->complemento;
+        $user->bairro = $data->bairro;
+        $user->cidade = $data->cidade;
+        $user->uf = $data->uf;
+        $user->telefone_1 = $data->telefone_1;
+        $user->telefone_2 = $data->telefone_2;
+        $user->save();
+        return redirect('/');
+>>>>>>> master
     }
 }

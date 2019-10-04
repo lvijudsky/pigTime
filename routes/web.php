@@ -39,6 +39,8 @@ Route::get('/servicos', function(){
     return view('admin.servicos');
 });
 
+Route::post('/regUser','Auth\RegisterController@create');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
