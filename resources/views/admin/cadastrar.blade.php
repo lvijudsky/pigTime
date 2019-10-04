@@ -59,7 +59,7 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
-                                <form class="form p-t-20" action="{{ route('register') }}" method="post">
+                                <form class="form p-t-20" action="/register" method="post">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
@@ -163,11 +163,7 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-<<<<<<< HEAD
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
-=======
-                                                <input type="password" class="form-control" id="senha" name="password" placeholder="Senha">
->>>>>>> master
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -178,11 +174,7 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-<<<<<<< HEAD
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="Repetir senha">
-=======
-                                                <input type="password" class="form-control" id="senha" name="password" placeholder="Repetir senha">
->>>>>>> master
                                             </div>
                                         </div>
                                     </div>
@@ -301,8 +293,8 @@
                                     </div>
                                    
                                     <div class="form-group">
-                                        <button type="submit" name="enviar" class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
-                                        <button type="submit" name="cancelar" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
+                                        <button  class="btn btn-success waves-effect waves-light m-r-10">Enviar</button>
+                                        <button  class="btn btn-inverse waves-effect waves-light">Cancelar</button>
                                     </div>
                                     
                                 </form>
