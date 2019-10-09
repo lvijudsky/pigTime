@@ -19,10 +19,6 @@ Route::get('/cadastrar', function(){
     return view('admin.cadastrar');
 });
 
-Route::get('/login', function() {
-    return view('admin.login');
-});
-
 Route::get('/perfil', function(){
     return view('admin.perfil');
 });
@@ -30,3 +26,11 @@ Route::get('/perfil', function(){
 Route::get('/inbox', function(){
     return view('admin.inbox');
 });
+
+Auth::routes();
+
+Route::get('/login', function() {
+    return view('admin.login');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');

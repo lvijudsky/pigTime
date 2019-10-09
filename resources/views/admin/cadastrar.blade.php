@@ -106,7 +106,7 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
-                                <form class="form p-t-20">
+                                <form class="form p-t-20" method='post' action='/register'>
 
                                     <div class="form-group row">
                                         <div class="col-sm-6">
@@ -117,7 +117,7 @@
                                                         <i class="ti-user"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Nome">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Nome" name='name'>
                                             </div>
                                         </div>
 
@@ -129,7 +129,7 @@
                                                         <i class="ti-user"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Sobrenome">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Sobrenome" name='lastName'>
                                             </div>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@
                                                             <i class="ti-user"></i>
                                                         </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="RG">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="RG" name='RG'>
                                             </div>
                                         </div>
 
@@ -155,7 +155,7 @@
                                                             <i class="ti-user"></i>
                                                         </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="CPF">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="CPF" name='CPF'>
                                             </div>
                                         </div>
 
@@ -186,7 +186,7 @@
                                                         <i class="ti-email"></i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail">
+                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail" name='email'>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -210,7 +210,7 @@
                                                         <i class="ti-lock"></i>
                                                     </span>
                                                 </div>
-                                                <input type="password" class="form-control" id="pwd1" placeholder="Senha">
+                                                <input type="password" class="form-control" id="pwd1" placeholder="Senha" name='password'>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -235,7 +235,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="address-1" placeholder="Av, Rua...">
+                                                <input type="text" class="form-control" id="address-1" placeholder="Av, Rua..." name='adress'>
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
@@ -246,7 +246,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="address-2" placeholder="N°">
+                                                <input type="text" class="form-control" id="address-2" placeholder="N°" name='adress'>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -257,7 +257,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="address-3" placeholder="Ap, BL, Cj...">
+                                                <input type="text" class="form-control" id="address-3" placeholder="Ap, BL, Cj..." name='adress'>
                                             </div>
                                         </div>
                                     </div>
@@ -271,7 +271,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                                                <input type="text" class="form-control" id="bairro" placeholder="Bairro" name='adress'>
                                             </div>
                                         </div>
                                         <div class="col-sm-5">
@@ -282,7 +282,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                                                <input type="text" class="form-control" id="cidade" placeholder="Cidade" name='adress'>
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
@@ -293,7 +293,7 @@
                                                         <i class="ti-home"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="uf" placeholder="UF">
+                                                <input type="text" class="form-control" id="uf" placeholder="UF" name='adress'>
                                             </div>
                                         </div>
                                     </div>
@@ -307,7 +307,7 @@
                                                         <i class="ti-mobile"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" id="tel-1" placeholder="Telefone 1">
+                                                <input type="text" class="form-control" id="tel-1" placeholder="Telefone 1" name='phone'>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -327,7 +327,7 @@
                                         <div class="col-sm-2">
                                             <form action="" method="post" enctype="multipart/form-data">
                                                 <label for="fileToUpload">Carregar foto</label>
-                                                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
+                                                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file" name='picture'>
                                             </form>
                                         </div>
                                         <div class="col-sm-5">
