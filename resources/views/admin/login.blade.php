@@ -6,7 +6,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro</title>
+    <title>Login</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -46,7 +46,7 @@
     <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
     <div class="container">
-      <img src="{{url('../img/logo-pig-time.png')}}" class="light-logo" alt="pigtime" /></span> </a><a class="navbar-brand js-scroll-trigger" href="#page-top">PIG TIME</a>
+      <img src="{{url('./admin/assets/images/logo-pig-icon.png')}}" class="light-logo" alt="pigtime" /></span> </a><a class="navbar-brand js-scroll-trigger" href="/">PIG TIME</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -54,19 +54,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#servicos">Serviços</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/#servicos">Serviços</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sobre-nos">Sobre</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/#sobre-nos">Sobre</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contato">Contato</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/#contato">Contato</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login">Entrar</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/cadastrar">Registrar</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/cadastrar">Cadastre-se</a>
           </li>
         </ul>
       </div>
@@ -97,14 +97,14 @@
             </div>
             <div id="fButtons" class="d-flex justify-content-center my-3">
                 <button class="btn btn-primary" type="submit">Entrar</button>
-                <a class="btn btn-primary ml-3" href="cadastro.html" role="button">Cadastrar</a>
+                <a class="btn btn-primary ml-3" href="/cadastrar" role="button">Cadastrar</a>
             </div>
         </form>
     </div>
 
     <footer class="page-footer fixed-bottom">
 
-        <<!-- Copyright Section -->
+        <!-- Copyright Section -->
         <section class="copyright py-4 text-center text-white">
             <div class="container">
                 <small>Copyright &copy; Projeto Integrado 2019 | Digital House</small>

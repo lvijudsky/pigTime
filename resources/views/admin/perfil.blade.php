@@ -40,7 +40,7 @@
             <header class="topbar">
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
                     <div class="navbar-header">
-                    <a class="navbar-brand" href="{{url('index.html')}}">
+                    <a class="navbar-brand" href="/">
                         <b>
                             
                             <img src="{{url('./admin/assets/images/logo-pig-icon.png')}}" alt="homepage" class="light-logo" />
@@ -65,7 +65,7 @@
                     <ul class="navbar-nav my-lg-0">
                     
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{url('./admin/assets/images/users/1.jpg')}}" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="/perfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{url('./admin/assets/images/users/1.jpg')}}" alt="user" class="profile-pic m-r-10" />{{Auth::user()->nome}}</a><a class="btn waves-effect waves-light btn-danger hidden-sm-down" href="/logout">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -127,16 +127,17 @@
                             <img class="card-img-top" src="{{url('./admin/assets/images/background/profile-bg.jpg')}}" alt="Card image cap">
                             <div class="card-block little-profile text-center">
                                 <div class="pro-img"><img src="{{url('./admin/assets/images/users/4.jpg')}}" alt="user" /></div>
-                                <h3 class="m-b-0">Angela Dominic</h3>
-                                <p>Web Designer &amp; Developer</p>
-                                <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Follow</a>
+                                <h3 class="m-b-0">{{Auth::user()->nome}}</h3>
+                                <h4 class="m-b-0">{{Auth::user()->sobrenome}}</h4>
+                            
+                                
                                 <div class="row text-center m-t-20">
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">1099</h3><small>Articles</small></div>
+                                        <h3 class="m-b-0 font-light">59</h3><small>Aprovados</small></div>
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">23,469</h3><small>Followers</small></div>
+                                        <h3 class="m-b-0 font-light">9</h3><small>Reprovados</small></div>
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">6035</h3><small>Following</small></div>
+                                        <h3 class="m-b-0 font-light">5</h3><small>Anuncios</small></div>
                                 </div>
                             </div>
                         </div>
@@ -194,16 +195,33 @@
                                         <div class="profiletimeline">
                                             <div class="sl-item">
                                                 <div class="sl-left"> <img src="{{url('./admin/assets/images/users/1.jpg')}}" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                        <p>assign a new task <a href="#"> Design weblayout</a></p>
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="{{url('./admin/assets/images/big/img1.jpg')}}" alt="user" class="img-responsive radius"></div>
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="{{url('./admin/assets/images/big/img2.jpg')}}" alt="user" class="img-responsive radius"></div>
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="{{url('./admin/assets/images/big/img3.jpg')}}" alt="user" class="img-responsive radius"></div>
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="{{url('./admin/assets/images/big/img4.jpg')}}" alt="user" class="img-responsive radius"></div>
+                                                <div class="sl-item">
+                                                    <div class="sl-left"> <img src="{{url('./admin/assets/images/users/2.jpg')}}" alt="user" class="img-circle"> </div>
+                                                    <div class="sl-item">
+                                                        <div class="sl-left"> <img src="{{url('./admin/assets/images/users/2.jpg')}}" alt="user" class="img-circle"> </div>
+                                                        <div class="sl-right">
+                                                            <div> <a href="#" class="link">Maria tem interesse em:</a> <span class="link">Instalar Quadro</span>
+                                                                <div class="m-t-20 row">
+                                                                    <div class="col-md-3 col-xs-12"><img src="{{url('./admin/assets/images/big/img1.jpg')}}" alt="user" class="img-responsive radius"></div>
+                                                                    <div class="col-md-9 col-xs-12">
+                                                                        <p> João, está aguardando sua aprovação para o serviço que você anunciou. Verifique o perfil do João atentamente e decida a aprovaçao o mais breve possível  </p> <a href="#" class="btn btn-warning" style="margin-right:4px"> Aprovar</a><a href="#" class="btn btn-danger"> Reprovar</a></div>
+                                                                </div>
+                                                            
+                                                            </div>
                                                         </div>
-                                                        <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                                    </div>
+                                                </div>
+                                            <hr>
+                                            <div class="sl-item">
+                                                <div class="sl-left"> <img src="{{url('./admin/assets/images/users/2.jpg')}}" alt="user" class="img-circle"> </div>
+                                                <div class="sl-right">
+                                                    <div> <a href="#" class="link">Maria tem interesse em:</a> <span class="link">Instalar Quadro</span>
+                                                        <div class="m-t-20 row">
+                                                            <div class="col-md-3 col-xs-12"><img src="{{url('./admin/assets/images/big/img1.jpg')}}" alt="user" class="img-responsive radius"></div>
+                                                            <div class="col-md-9 col-xs-12">
+                                                                <p> João, está aguardando sua aprovação para o serviço que você anunciou. Verifique o perfil do João atentamente e decida a aprovaçao o mais breve possível  </p> <a href="#" class="btn btn-warning" style="margin-right:4px"> Aprovar</a><a href="#" class="btn btn-danger"> Reprovar</a></div>
+                                                        </div>
+                                                    
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,24 +229,14 @@
                                             <div class="sl-item">
                                                 <div class="sl-left"> <img src="{{url('./admin/assets/images/users/2.jpg')}}" alt="user" class="img-circle"> </div>
                                                 <div class="sl-right">
-                                                    <div> <a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                    <div> <a href="#" class="link">Maria tem interesse em:</a> <span class="link">Instalar Quadro</span>
                                                         <div class="m-t-20 row">
                                                             <div class="col-md-3 col-xs-12"><img src="{{url('./admin/assets/images/big/img1.jpg')}}" alt="user" class="img-responsive radius"></div>
                                                             <div class="col-md-9 col-xs-12">
-                                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p> <a href="#" class="btn btn-success"> Design weblayout</a></div>
+                                                                <p> João, está aguardando sua aprovação para o serviço que você anunciou. Verifique o perfil do João atentamente e decida a aprovaçao o mais breve possível  </p> <a href="#" class="btn btn-warning" style="margin-right:4px"> Aprovar</a><a href="#" class="btn btn-danger"> Reprovar</a></div>
                                                         </div>
-                                                        <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                                    
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="{{url('./admin/assets/images/users/3.jpg')}}" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
-                                                        <p class="m-t-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper </p>
-                                                    </div>
-                                                    <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
                                                 </div>
                                             </div>
                                             <hr>
