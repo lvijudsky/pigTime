@@ -51,8 +51,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'lastName' => ['required', 'string', 'max:255'],
+            'RG' => ['required', 'string', 'max:255'],
+            'CPF' => ['required', 'string', 'max:255'],
+            'sexo' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'adress' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -64,23 +70,16 @@ class RegisterController extends Controller
      */
     protected function create(Request $data)
     {
-        $user = new User;
-        $user->nome = $data->nome;
-        $user->sobrenome = $data->sobrenome;
-        $user->rg = $data->rg;
-        $user->cpf = $data->cpf;
-        $user->sexo = $data->sexo;
-        $user->email = $data->email;
-        $user->password = Hash::make($data->password);
-        $user->endereco = $data->endereco;
-        $user->numero = $data->numero;
-        $user->complemento = $data->complemento;
-        $user->bairro = $data->bairro;
-        $user->cidade = $data->cidade;
-        $user->uf = $data->uf;
-        $user->telefone_1 = $data->telefone_1;
-        $user->telefone_2 = $data->telefone_2;
-        $user->save();
-        return redirect('/perfil');
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'sobrenome' => $data['lastName'],
+            'RG' => $data['RG'],
+            'CPF' => $data['CPF'],
+            'sexo' => $data['sexo'],
+            'endereço' => $data['adress'],
+            'telefone' => $data['phone'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
 }
