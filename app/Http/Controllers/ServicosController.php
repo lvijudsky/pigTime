@@ -12,12 +12,13 @@ class ServicosController extends Controller
 
         // Carregar os serviços do banco de dados
         $servicos = Servico::all();
+        $user = Servico::find(1);
         // Carregar os serviços em linha do tempo infitina ?
 
         // Retornar a view com os serviços
         return view(
             'admin.servicos',
-            compact('servicos')
+            compact('servicos','user')
             // função compact passa a variavel $servicos para a view
         );
     }
