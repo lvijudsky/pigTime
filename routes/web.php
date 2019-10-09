@@ -27,7 +27,7 @@ Route::get('/login', function() {
 
 Route::get('/perfil', function(){
     return view('admin.perfil');
-});
+})->middleware('auth');
 
 Route::get('/inbox', function(){
     return view('admin.inbox');
@@ -39,6 +39,8 @@ Route::get('/servicos', function(){
 
 
 Route::post('/regUser','Auth\RegisterController@create');
+
+Route::get('/logout','Auth\LoginController@logout');
 
 Auth::routes();
 

@@ -81,6 +81,6 @@ class RegisterController extends Controller
         $user->telefone_1 = $data->telefone_1;
         $user->telefone_2 = $data->telefone_2;
         $user->save();
-        return redirect('/');
+        return redirect('/perfil');
     }
 }
