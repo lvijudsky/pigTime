@@ -37,6 +37,15 @@ Route::get('/servicos', function(){
     return view('admin.servicos');
 });
 
+// Definindo as rotas para o CRUD de produtos
+Route::get		('/servicos',			'servicosController@index'	)->middleware('auth'); // <--- LISTAR OS SERVICOS CADASTRADOS
+Route::get		('/servicos/create',	'servicosController@create'	); // <--- MOSTRAR UM FORMULÁRIO PARA CRIAR UM NOVO SERVICO
+Route::get		('/servicos/{id}/edit',	'servicosController@edit'	); // <--- MOSTRAR UM FORMULÁRIO PARA ALTERAR UM NOVO SERVICO
+Route::get		('/servicos/{id}',		'servicosController@show'	); // <--- MOSTRAR UM ÚNICO SERVICO COM SEUS DETALHES E OPÇÕES
+Route::post		('/servicos',			'servicosController@store'	); // <--- CRIAR UM SERVICO (REDIRECIONAR PARA A LISTA...)
+Route::put		('/servicos/{id}',		'servicosController@update'	); // <--- ALTERAR UM SERVICO (REDIRECIONA PARA A LISTA...)
+Route::delete	('/servicos/{id}',		'servicosController@destroy'); // <--- REMOVE UM SERVICO (REDIRECIONA PARA A LISTA...)
+
 
 Route::post('/regUser','Auth\RegisterController@create');
 
