@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Servico;
 
-class servicos extends Seeder
+class servicosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,12 +16,12 @@ class servicos extends Seeder
         
         $s->nome = 'Passear com cachorro';
         $s->descricao = 'Tenho um labrador de 50kg ele ama correr e morder o dono';
-        $s->endereco = 'Rua Bartolomeo Bon';
-        $s->horaInical = '150308820-06';
-        $s->horaFinal = 'm';
-        $s->rg = 'sergiodhh@hotmail.com';
-        $s->status = '';
-        $s->avaliacao = 'Sao Sebastiao';
+        $s->endereco = 'Rua Bartolomeo Bon, 269';
+        $s->horaInicial = '2019-10-09 11:20:00';
+        $s->horaFinal = '2019-10-09 12:20:00';
+        $s->rg = '23.236.643-3';
+        $s->status = 'Active';
+        $s->avaliacao = null;
 
         $s->save();
     }

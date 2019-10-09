@@ -23,7 +23,7 @@ class CreateServicosTable extends Migration
             $table->dateTime('horaFinal');
             $table->string('rg');
             $table->string('status');
-            $table->string('avaliacao');
+            $table->string('avaliacao')->nullable();
 
         });
     }
