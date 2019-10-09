@@ -52,7 +52,7 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ url('/servicos') }}">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             
@@ -112,7 +112,7 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="servicos.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Serviços</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="inbox.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Mensagem</span></a>
+                        <li> <a class="waves-effect waves-dark" href="{{ url('inbox')}}" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Mensagem</span></a>
                         </li>
                     </ul>
                     <div class="text-center m-t-30">

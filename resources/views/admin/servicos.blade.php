@@ -37,7 +37,7 @@
                             </div>
                     </div>
                     <div class="row"></div>
-                                    <a href="#" class="btn btn-primary">Visualizar</a>
+                                    <a href="/servicos/1" class="btn btn-primary">Visualizar</a>
                         </div>
                 </div>
             <!-- Column -->
