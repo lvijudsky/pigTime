@@ -64,6 +64,23 @@ class RegisterController extends Controller
      */
     protected function create(Request $data)
     {
+        //$foto = './resources/views/fotos/'. $_FILES['img']['name'];
+    	
+        // if($_POST){
+            
+            //      if($_FILES['img']){
+                //          if($_FILES['img']['error'] == 0){
+        //              //salvando a foto de forma descente
+        //             // move_uploaded_file($_FILES['img']['tmp_name'],'./fotos/'.$_FILES['img']['name']);
+        //             // MOVE THE UPLOADED FILES TO THE DESTINATION DIRECTORY 
+        //             $data->store('./fotos/'.$_FILES['img']['name'], $_FILES['img']['tmp_name']);
+        // //            // $arquivo_def = './resources/views/fotos/'.$_FILES['img']['name'];
+        //          }
+        //     }
+        
+        // }
+        $foto = 'fotos/'.$_FILES['img']['name'];
+
         $user = new User;
         $user->nome = $data->nome;
         $user->sobrenome = $data->sobrenome;
@@ -80,6 +97,22 @@ class RegisterController extends Controller
         $user->uf = $data->uf;
         $user->telefone_1 = $data->telefone_1;
         $user->telefone_2 = $data->telefone_2;
+        $user->url_img = $foto; 
+        
+        request()->validate([
+            'file'  => 'required|mimes:doc,docx,pdf,txt|max:2048',
+            ]);
+            
+            if ($files = $request->file('img')) {
+                $destinationPath = 'app/Http/Controllers/Auth/fotos/'; // upload path
+                $profilefile = date('YmdHis') . "." . $files->getClientOriginalExtension();
+                $files->move($destinationPath, $profilefile);
+                $insert['file'] = "$profilefile";
+            }
+            dd($files);
+            
+            $check = Document::insertGetId($insert);
+        
         $user->save();
         return redirect('/');
     }

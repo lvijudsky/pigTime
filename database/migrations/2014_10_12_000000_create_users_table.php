@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('uf');
             $table->string('telefone_1');
             $table->string('telefone_2');
+            $table->string('url_img');
             $table->rememberToken();
             $table->timestamps();
         });

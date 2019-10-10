@@ -30,6 +30,7 @@ class usersTableSeeder extends Seeder
         $u->uf = 'PI';
         $u->telefone_1 = '1138150932';
         $u->telefone_2 = '1138150940';
+        $u->url_img = 'urlimg.jpg';
 
         $u->save();
 
@@ -50,6 +51,7 @@ class usersTableSeeder extends Seeder
         $u->uf = 'CE';
         $u->telefone_1 = '1126109283';
         $u->telefone_2 = '85984228992';
+        $u->url_img = 'something.jpg';
 
         $u->save();
     }

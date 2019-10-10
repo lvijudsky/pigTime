@@ -59,7 +59,7 @@
                             <div class="card-body">
                                 <h4 class="card-title" style="text-align: center">Formulário de Cadastro</h4>
 
-                                <form class="form p-t-20" action="/regUser" method="post">
+                                <form class="form p-t-20" action="/regUser" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
@@ -279,7 +279,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-2">
                                                 <label for="fileToUpload">Carregar foto</label>
-                                                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
+                                                <input type="file" name="img" id="fileToUpload" class="form-control-file">
                                         </div>
                                         <div class="col-sm-5">
                                         </div>
