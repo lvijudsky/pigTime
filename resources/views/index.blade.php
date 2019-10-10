@@ -55,7 +55,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{url('./admin/img/portfolio/cabin.png')}}" alt="">
+            <img class="img-fluid" src="{{url('./img/portfolio/cabin.png')}}" alt="">
           </div>
         </div>
 
@@ -67,7 +67,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{url('./admin/img/portfolio/cake.png')}}" alt="">
+            <img class="img-fluid" src="{{url('./img/portfolio/cake.png')}}" alt="">
           </div>
         </div>
 
@@ -79,7 +79,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{url('./admin/img/portfolio/circus.png')}}" alt="">
+            <img class="img-fluid" src="{{url('./img/portfolio/circus.png')}}" alt="">
           </div>
         </div>
 
@@ -91,7 +91,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{url('./admin/img/portfolio/game.png')}}" alt="">
+            <img class="img-fluid" src="{{url('./img/portfolio/game.png')}}" alt="">
           </div>
         </div>
 
@@ -103,7 +103,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{url('./admin/img/portfolio/safe.png')}}" alt="">
+            <img class="img-fluid" src="{{url('./img/portfolio/safe.png')}}" alt="">
           </div>
         </div>
 
@@ -115,7 +115,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{url('./admin/img/portfolio/submarine.png')}}" alt="">
+            <img class="img-fluid" src="{{url('./img/portfolio/submarine.png')}}" alt="">
           </div>
         </div>
 

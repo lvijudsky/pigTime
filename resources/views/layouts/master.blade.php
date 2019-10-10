@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url('admin/assets/images/favicon.png')}}">
 
-  <title>Freelancer - Start Bootstrap Theme</title>
+  <title>PigTime - Viva o seu tempo</title>
 
   <!-- Custom fonts for this theme -->
   <link href="{{url('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
