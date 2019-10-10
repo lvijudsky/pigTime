@@ -21,7 +21,7 @@ class servicosTableSeeder extends Seeder
         $s->horaFinal = '2019-10-09 12:20:00';
         $s->rg = '23.236.643-3';
         $s->status = 'Active';
-        $s->avaliacao = null;
+        $s->avaliacao = 'teste';
 
         $s->save();
     }
