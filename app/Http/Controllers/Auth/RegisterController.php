@@ -85,8 +85,9 @@ class RegisterController extends Controller
         //     }
         
         // }
-        $foto = 'fotos/'.$_FILES['img']['name'];
-
+        dd($_FILES);
+       $foto = 'fotos/'.$_FILES['img']['name'];
+        
         $user = new User;
         $user->nome = $data->nome;
         $user->sobrenome = $data->sobrenome;
@@ -115,7 +116,7 @@ class RegisterController extends Controller
                 $files->move($destinationPath, $profilefile);
                 $insert['file'] = "$profilefile";
             }
-            dd($files);
+           // dd($files);
             
             $check = Document::insertGetId($insert);
         

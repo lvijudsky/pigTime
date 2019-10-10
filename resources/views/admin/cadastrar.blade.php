@@ -279,8 +279,8 @@
 
                                     <div class="form-group row">
                                         <div class="col-sm-2">
-                                                <label for="fileToUpload">Carregar foto</label>
-                                                <input type="file" name="img" id="fileToUpload" class="form-control-file">
+                                                <label for="img">Carregar foto</label>
+                                                <input type="file" name="img" id="img" class="form-control-file">
                                         </div>
                                         <div class="col-sm-5">
                                         </div>
