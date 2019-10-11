@@ -116,7 +116,7 @@
                         </li>
                     </ul>
                     <div class="text-center m-t-30">
-                        <a href="anuncios.html" class="btn waves-effect waves-light btn-warning hidden-md-down"> Ganhar Tempo</a>
+                        <a href="{{ url('/servicos') }}" class="btn waves-effect waves-light btn-warning hidden-md-down"> Ganhar Tempo</a>
                     </div>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -146,6 +146,9 @@
                 @yield('breadcrumb')
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- PAGE CONTENT -->
                 <!-- ============================================================== -->
                 @yield('content')
             </div>

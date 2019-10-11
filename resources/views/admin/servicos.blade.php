@@ -27,9 +27,9 @@
         @foreach ($servicos as $s)
         <!-- CARD -->
         <div class="col-lg-4 col-md-4">
-            <div class="card">
+            <div class="card rounded">
                 <!-- HEADER CARD; TÍTULO E DESCRICAO -->
-                <img class="" src="{{ url('admin/assets/images/background/previsao-do-tempo.jpg') }}" alt="Card image cap">
+                <img class="rounded-top" src="{{ url('admin/assets/images/background/previsao-do-tempo.jpg') }}" alt="Card image cap">
                 <div class="card-img-overlay" style="height:110px;">
                     {{-- TITULO --}}
                     <h3 class="card-title text-white m-b-0 dl">{{ $s->nome }}</h3>
@@ -41,7 +41,7 @@
                     {{-- NOME DO USUARIO --}}
                     <h5 class="card-title">Nome </h5>
                     {{-- DESCRICAO DETALHADA --}}
-                    <p class="card-text">{{ Str::limit($s->descricao, $limit=100, $end = '...')}}</p>
+                    <p class="card-text">{{ Str::limit($s->descricao, $limit=70, $end = '...')}}</p>
                     {{-- HORARIO / DISTANCIA / PAGAMENTO --}}
                     <div class="row">
                         <div class="col-8 b-r align-self-center">
@@ -64,10 +64,10 @@
                 </div>
                 <a href="/servicos/{{ $s->id }}" class="btn btn-primary">Visualizar</a>
                 </div>
-        </div>
+            </div>
+            @endforeach
         <!-- Column -->
         </div>
-        @endforeach
         <!-- CARREGAR MAIS  -->
         <div class="d-flex justify-content-start">
             <a href="#" class="btn btn-primary d-flex justify-content-center">Carregar Mais</a>
