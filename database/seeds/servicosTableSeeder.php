@@ -19,7 +19,7 @@ class servicosTableSeeder extends Seeder
         $s->endereco = 'Rua Bartolomeo Bon, 269';
         $s->horaInicial = '2019-10-09 11:20:00';
         $s->horaFinal = '2019-10-09 12:20:00';
-        $s->rg = '23.236.643-3';
+        $s->id_dono = '2';
         $s->status = 'Active';
         $s->avaliacao = 'teste';
 

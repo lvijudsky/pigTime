@@ -31,7 +31,7 @@
             {{-- CORPO DO CARD --}}
             <div class="card-body weather-small">
                 {{-- NOME DO USUARIO --}}
-                <h5 class="card-title">Nome </h5>
+                <h5 class="card-title">{{ $user->nome . ' ' . $user->sobrenome }} </h5>
                 {{-- DESCRICAO DETALHADA --}}
                 <p class="card-text">{{ Str::limit($servico->descricao, $limit=70, $end = '...')}}</p>
                 {{-- HORARIO / DISTANCIA / PAGAMENTO --}}

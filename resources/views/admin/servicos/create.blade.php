@@ -59,6 +59,16 @@
                         </div>
                             
                         <div class="form-group row">
+                            {{-- CEP --}}
+                            <div class="col-sm-7">
+                                <label for="CEP">CEP</label>
+                                <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-search"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="CEP" maxlength="9" />
+                                </div>
+                            </div>
                             {{-- ENDERECO SERVICO --}}
                             <div class="col-sm-6">
                                 <label for="endereco">Endereço</label>
@@ -68,7 +78,7 @@
                                             <i class="ti-home"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control @error('endereco') is-invalid @enderror " id="endereco" name="endereco" placeholder="Av, Rua...">
+                                    <input type="text" class="form-control @error('endereco') is-invalid @enderror " id="endereco" name="endereco" placeholder="Av, Rua..." readonly>
                                     @error('endereco')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -101,7 +111,25 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        {{-- BAIRRO --}}
+                        <div class="col-4">
+                            <label for="bairro">Bairro</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-home"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="bairro" readonly />
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="UF">UF</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-map-signs"></i></div>
+                                </div>
+                                <input type="text" class="form-control" id="UF" readonly />
+                            </div>
+                        </div>
                         <div class="form-group row">
                             {{-- DATA --}}
                             <div class="col-sm-6">
@@ -129,7 +157,7 @@
                                             <i class="ti-email"></i>
                                         </span>
                                     </div>
-                                    <input type="time" step="1" class="form-control @error('horaInicial') is-invalid @enderror " id="horaInicial" name="horaInicial" placeholder="Horário de início:">
+                                    <input type="time"  class="form-control @error('horaInicial') is-invalid @enderror " id="horaInicial" name="horaInicial" placeholder="Horário de início:">
                                     @error('horaInicial')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -146,7 +174,7 @@
                                             <i class="ti-email"></i>
                                         </span>
                                     </div>
-                                    <input type="time" step="1" class="form-control @error('horaFinal') is-invalid @enderror" id="horaFinal" name="horaFinal" placeholder="Horário de término:">
+                                    <input type="time"  class="form-control @error('horaFinal') is-invalid @enderror" id="horaFinal" name="horaFinal" placeholder="Horário de término:">
                                     @error('horaFinal')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -156,7 +184,7 @@
                             </div>
                         </div>
                         {{-- INPUT ID_USUARIO --}}
-                            <input type="hidden" name="id_dono" id="id_dono" value="{{ Auth::id }}">
+                            <input type="hidden" name="id_dono" id="id_dono" value="{{ Auth::user()->id }}">
                     
                         <div class="form-group">
                             <button type="submit" name="anunciar" class="btn btn-success waves-effect waves-light m-r-10">Anunciar</button>
@@ -167,6 +195,7 @@
             </div>
         </div>
     </div>
+    <script src="{{ url('js/cep.js')}}"></script>
 @endsection
 
 

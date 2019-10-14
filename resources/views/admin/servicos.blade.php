@@ -39,9 +39,9 @@
                 {{-- CORPO DO CARD --}}
                 <div class="card-body weather-small">
                     {{-- NOME DO USUARIO --}}
-                    <h5 class="card-title">Nome </h5>
+                    <h5 class="card-title">{{ $s->dono . ' ' . $s->donoSobrenome }} </h5>
                     {{-- DESCRICAO DETALHADA --}}
-                    <p class="card-text">{{ Str::limit($s->descricao, $limit=70, $end = '...')}}</p>
+                    <p class="card-text">{{ Str::limit($s->descricao, $limit=60, $end = '...')}}</p>
                     {{-- HORARIO / DISTANCIA / PAGAMENTO --}}
                     <div class="row">
                         <div class="col-8 b-r align-self-center">
@@ -49,7 +49,7 @@
                                 <div class="display-6 text-info"><i class="far fa-clock"></i></div>
                                     <div class="m-l-20">
                                         {{-- HORARIO --}}
-                                        <h1 class="font-light text-info m-b-0">{{ $s->horaInicial->format('h:i') }}<sup>h</sup></h1>
+                                        <h1 class="font-light text-info m-b-0">{{ $s->horaInicial->format('H:i') }}<sup>h</sup></h1>
                                         {{-- PAGAMENTO --}}
                                         <small>Pagamento {{ $s->horaFinal->diffInHours($s->horaInicial)}} h</small>
                                 </div>

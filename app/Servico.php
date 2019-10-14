@@ -22,7 +22,6 @@ class Servico extends Model
     ];
 
     protected $attributes = [
-        'rg' => '00.000.000-0',
         'status' => 'Active',
     ];
 

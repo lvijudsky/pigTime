@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Servico;
+use App\User;
 
 class ServicosController extends Controller
 {
@@ -12,7 +13,13 @@ class ServicosController extends Controller
 
         // Carregar os serviços do banco de dados
         $servicos = Servico::all();
-        $user = Servico::find(1);
+        // var_dump($servicos->user());
+        // exit;
+        foreach ($servicos as $servico) {
+            $user = User::find($servico->id_dono);
+            $servico->dono = $user->nome;
+            $servico->donoSobrenome = $user->sobrenome;
+        }
         // Carregar os serviços em linha do tempo infitina ?
 
         // Retornar a view com os serviços
@@ -28,11 +35,12 @@ class ServicosController extends Controller
         // Carrega o serviço do banco de dados
         // Comando FIND(encontrar)igual o SQL
         $servico = Servico::find($id);
+        $user = User::find($servico->id_dono);
 
         // Retornar a view do serviço selecionado
         return view(
             'admin.servicos.show',
-            compact('servico')
+            compact('servico','user')
         );
     }
 
@@ -123,19 +131,18 @@ class ServicosController extends Controller
         //     ]
         // );
 
-        // Novo Produtos
-        var_dump(request('id_dono'));
-        exit;
+        // Novo Servicos
+        // var_dump(request('id_dono'));
+        // exit;
         $s = new Servico;
 
-        // Atribuindo valores ao Produto
+        // Atribuindo valores ao Servico
         $s->nome = request('nome');
         $s->descricao = request('descricao');
-        $s->endereco = request('endereco').request('numero').request('complemento');
+        $s->endereco = request('endereco'). ' '. request('numero'). ' ' . request('complemento');
         $s->horaInicial = request('data').' '.request('horaInicial').':00';
         $s->horaFinal = request('data').' '.request('horaFinal').':00';
-        $s->id_dono =
-        // $s->rg = request('rg');
+        $s->id_dono = request('id_dono');
         // Salvar o produto
         $s->save();
 
