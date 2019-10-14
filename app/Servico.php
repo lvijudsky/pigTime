@@ -14,8 +14,16 @@ class Servico extends Model
         return $this->belongsTo('App\User');
     }
 
+    protected $dateFormat = 'Y-m-d H:i:s';
+
     protected $dates = [
         'horaInicial',
         'horaFinal'
     ];
+
+    protected $attributes = [
+        'rg' => '00.000.000-0',
+        'status' => 'Active',
+    ];
+
 }

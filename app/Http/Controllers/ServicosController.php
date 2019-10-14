@@ -112,28 +112,30 @@ class ServicosController extends Controller
     public function store(){
         // Validar request
         // request -> pega o valor do campo do formulario
-        request()->validate(
-            [
-                // $campo => $regraDeValidacao
-                'nome' => 'required',
-                'descricao' => 'required',
-                'endereco' => 'required',
-                'horaInicial' => 'required',
-                'horaFinal' => 'required',
-                'rg' => 'required',
-            ]
-        );
+        // request()->validate(
+        //     [
+        //         // $campo => $regraDeValidacao
+        //         'nome' => 'required',
+        //         'descricao' => 'required',
+        //         'endereco' => 'required',
+        //         'horaInicial' => 'required',
+        //         'horaFinal' => 'required',
+        //     ]
+        // );
 
         // Novo Produtos
-        $s = new Produto;
+        var_dump(request('id_dono'));
+        exit;
+        $s = new Servico;
 
         // Atribuindo valores ao Produto
         $s->nome = request('nome');
         $s->descricao = request('descricao');
-        $s->endereco = request('endereco');
-        $s->horaInicial = request('horaInicial');
-        $s->horaFinal = request('horaFinal');
-        $s->rg = request('rg');
+        $s->endereco = request('endereco').request('numero').request('complemento');
+        $s->horaInicial = request('data').' '.request('horaInicial').':00';
+        $s->horaFinal = request('data').' '.request('horaFinal').':00';
+        $s->id_dono =
+        // $s->rg = request('rg');
         // Salvar o produto
         $s->save();
 

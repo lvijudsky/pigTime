@@ -14,7 +14,7 @@ class servicosTableSeeder extends Seeder
     {
         $s = new Servico();
         
-        $s->nome = 'Passear com cachorro';
+        $s->nome = 'Passear com cachorro Grande';
         $s->descricao = 'Tenho um labrador de 50kg ele ama correr e morder o dono';
         $s->endereco = 'Rua Bartolomeo Bon, 269';
         $s->horaInicial = '2019-10-09 11:20:00';
