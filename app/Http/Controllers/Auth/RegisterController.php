@@ -70,21 +70,21 @@ class RegisterController extends Controller
      */
     protected function create(Request $data)
     {
-        $foto = './fotos/'. $_FILES['img']['name'];
-       // dd($_FILES);
+        //$foto = './fotos/'. $_FILES['img']['name'];
+    //    dd($_FILES);
     	
-        if($_POST){
+        // if($_POST){
             
-            if($_FILES['img']){
-                if($_FILES['img']['error'] == 0){
-                    //salvando a foto de forma descente
-                    $data->file('img')->store('./fotos'.$_FILES['img']['name']);
-                    //move_uploaded_file($_FILES['img']['tmp_name'],'./fotos/'.$_FILES['img']['name']);
-                   //     $arquivo_def = './resources/views/fotos/'.$_FILES['img']['name'];
-                }
-            }
+        //     if($_FILES['img']){
+        //         if($_FILES['img']['error'] == 0){
+        //             //salvando a foto de forma descente
+        //             //$data->file($_FILES['img']['tmp_name'])->store('./fotos'.$_FILES['img']['name']);
+        //             move_uploaded_file($_FILES['img']['tmp_name'],'./fotos/'.$_FILES['img']['name']);
+        //            //     $arquivo_def = './resources/views/fotos/'.$_FILES['img']['name'];
+        //         }
+        //     }
         
-        }
+        // }
         //$foto = 'fotos/'.$_FILES['img']['name'];
         
         $user = new User;
@@ -103,8 +103,15 @@ class RegisterController extends Controller
         $user->uf = $data->uf;
         $user->telefone_1 = $data->telefone_1;
         $user->telefone_2 = $data->telefone_2;
-        $user->url_img = $foto; 
+        //$user->url_img = $foto; 
         
+        if (!empty($data['img'])) {
+            $nomeArquivo = time() . '.' . $data['img']->extension();
+            
+            
+            $data['img']->storeAs('\uploads\storage', $nomeArquivo);
+            $user->url_img = $nomeArquivo;
+        }
         // request()->validate([
         //     'file'  => 'required|mimes:doc,docx,pdf,txt|max:2048',
         //     ]);
