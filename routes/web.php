@@ -45,7 +45,7 @@ Route::get		('/servicos/{id}',		'servicosController@show'	); // <--- MOSTRAR UM 
 Route::post		('/servicos',			'servicosController@store'	); // <--- CRIAR UM SERVICO (REDIRECIONAR PARA A LISTA...)
 Route::put		('/servicos/{id}',		'servicosController@update'	); // <--- ALTERAR UM SERVICO (REDIRECIONA PARA A LISTA...)
 Route::delete	('/servicos/{id}',		'servicosController@destroy'); // <--- REMOVE UM SERVICO (REDIRECIONA PARA A LISTA...)
-
+Route::get      ('/user/servicos', 'servicosController@userindex'); // <-- MOSTRA OS SERVICOS ASSOCIADOS AO USUARIO
 
 Route::post('/regUser','Auth\RegisterController@create');
 

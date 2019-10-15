@@ -6,7 +6,8 @@
                 <h3 class="text-themecolor">Escolha um serviço e ganhe tempo!</h3>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                    <li class="breadcrumb-item active">Serviços</li>
+                    <li class="breadcrumb-item">Serviços</li>
+                    <li class="breadcrumb-item active">Meus Serviços</li>
                 </ol>
             </div>
         <div class="col-md-7 col-4 align-self-center">
@@ -39,7 +40,7 @@
                 {{-- CORPO DO CARD --}}
                 <div class="card-body weather-small">
                     {{-- NOME DO USUARIO --}}
-                    <h5 class="card-title">{{ $s->dono . ' ' . $s->donoSobrenome }} </h5>
+                    {{-- <h5 class="card-title">{{ $s->dono . ' ' . $s->donoSobrenome }} </h5> --}}
                     {{-- DESCRICAO DETALHADA --}}
                     <p class="card-text">{{ Str::limit($s->descricao, $limit=60, $end = '...')}}</p>
                     {{-- HORARIO / DISTANCIA / PAGAMENTO --}}

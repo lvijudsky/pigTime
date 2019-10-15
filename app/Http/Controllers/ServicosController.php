@@ -30,6 +30,18 @@ class ServicosController extends Controller
         );
     }
 
+    // CARREGAR OS SERVICOS ASSOCIADOS AO USUARIO LOGADO
+    public function userindex() {
+
+        // Carregar os serviços do banco de dados
+        $servicos = Servico::where('id_dono','=',auth()->user()->id)->get();
+
+        // Retornar a view com os serviços
+        return view(
+            'admin.servicos.user',
+            compact('servicos')
+        );
+    }
 
     // MOSTRAR SERVIÇO INDIVIDUAL - '/servicos/{id}'
     public function show($id) {
