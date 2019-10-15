@@ -12,7 +12,7 @@ class ServicosController extends Controller
     public function index() {
 
         // Carregar os serviços do banco de dados
-        $servicos = Servico::all();
+        $servicos = Servico::where('id_dono','!=',auth()->user()->id)->get();
         // var_dump($servicos->user());
         // exit;
         foreach ($servicos as $servico) {
@@ -29,6 +29,7 @@ class ServicosController extends Controller
             // função compact passa a variavel $servicos para a view
         );
     }
+
 
     // MOSTRAR SERVIÇO INDIVIDUAL - '/servicos/{id}'
     public function show($id) {
