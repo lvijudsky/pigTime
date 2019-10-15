@@ -33,7 +33,7 @@
                 {{-- NOME DO USUARIO --}}
                 <h5 class="card-title">{{ $user->nome . ' ' . $user->sobrenome }} </h5>
                 {{-- DESCRICAO DETALHADA --}}
-                <p class="card-text">{{ Str::limit($servico->descricao, $limit=70, $end = '...')}}</p>
+                <p class="card-text">{{ $servico->descricao }}</p>
                 {{-- HORARIO / DISTANCIA / PAGAMENTO --}}
                 <div class="row">
                     <div class="col-8 b-r align-self-center">
@@ -41,7 +41,7 @@
                             <div class="display-6 text-info"><i class="far fa-clock"></i></div>
                                 <div class="m-l-20">
                                     {{-- HORARIO --}}
-                                    <h1 class="font-light text-info m-b-0">{{ $servico->horaInicial->format('h:i') }}<sup>h</sup></h1>
+                                    <h1 class="font-light text-info m-b-0">{{ $servico->horaInicial->format('H:i') }}<sup>h</sup></h1>
                                     {{-- PAGAMENTO --}}
                                     <small>Pagamento {{ $servico->horaFinal->diffInHours($servico->horaInicial)}} h</small>
                                 </div>
