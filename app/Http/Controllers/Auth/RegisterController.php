@@ -71,6 +71,7 @@ class RegisterController extends Controller
     protected function create(Request $data)
     {
         //$foto = './resources/views/fotos/'. $_FILES['img']['name'];
+        dd($data->file('name'));
     	
         // if($_POST){
             
@@ -85,8 +86,7 @@ class RegisterController extends Controller
         //     }
         
         // }
-        dd($_FILES);
-       $foto = 'fotos/'.$_FILES['img']['name'];
+        $foto = 'fotos/'.$_FILES['img']['name'];
         
         $user = new User;
         $user->nome = $data->nome;
