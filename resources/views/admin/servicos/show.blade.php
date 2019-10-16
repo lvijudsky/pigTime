@@ -55,12 +55,14 @@
                     </div>
                 </div>
             </div>
+                {{-- BOTÃO EDITAR --}}
                 @if (Auth::user()->id == $servico->id_dono)
-                <a class="btn btn-primary" href="/produtos/edit">Editar</a>
+                <a class="btn btn-primary" href="/servicos/{{ $servico->id }}/edit">Editar</a>
                 @endif
             </div>
             {{-- FINAL DA DIV --}}
         </div>
+        {{-- PERFIL ANUNCIANTE --}}
         <div class="col-4">
             <div class="card">
                 <img class="card-img-top" src="{{url('./admin/assets/images/background/profile-bg.jpg')}}" alt="Card image cap">

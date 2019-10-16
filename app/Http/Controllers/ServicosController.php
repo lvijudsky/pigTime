@@ -25,7 +25,7 @@ class ServicosController extends Controller
         // Retornar a view com os serviços
         return view(
             'admin.servicos',
-            compact('servicos','user')
+            compact('servicos')
             // função compact passa a variavel $servicos para a view
         );
     }
@@ -35,6 +35,12 @@ class ServicosController extends Controller
 
         // Carregar os serviços do banco de dados
         $servicos = Servico::where('id_dono','=',auth()->user()->id)->get();
+
+        foreach ($servicos as $servico) {
+            $user = User::find($servico->id_dono);
+            $servico->dono = $user->nome;
+            $servico->donoSobrenome = $user->sobrenome;
+        }
 
         // Retornar a view com os serviços
         return view(
@@ -75,17 +81,17 @@ class ServicosController extends Controller
 
         // Validar o request
         // request -> pega o valor do campo do formulario
-        request()->validate(
-            [
-                // $campo => $regra
-                'nome' => 'required',
-                'descricao' => 'required',
-                'endereco' => 'required',
-                'horaInicial' => 'required',
-                'horaFinal' => 'required',
-                'rg' => 'required',
-            ]
-            );
+        // request()->validate(
+        //     [
+        //         // $campo => $regra
+        //         'nome' => 'required',
+        //         'descricao' => 'required',
+        //         'CEP' => 'required',
+        //         'endereco' => 'required',
+        //         'horaInicial' => 'required',
+        //         'horaFinal' => 'required',
+        //     ]
+        //     );
         
         // Carregando o produto da base de dados
         $servico = Servico::find($id);
@@ -93,10 +99,9 @@ class ServicosController extends Controller
         // Alterar os valores do produto
         $servico->nome = request('nome');
         $servico->descricao = request('descricao');
-        $servico->endereco = request('endereco');
-        $servico->horaInicial = request('horaInicial');
-        $servico->horaFinal = request('horaFinal');
-        $servico->rg = request('rg');
+        $s->endereco = request('endereco'). ' '. request('numero'). ' ' . request('complemento');
+        $s->horaInicial = request('data').' '.request('horaInicial').':00';
+        $s->horaFinal = request('data').' '.request('horaFinal').':00';
 
         // Salvar as alterações no banco de dados
         $servico->save();
@@ -152,6 +157,7 @@ class ServicosController extends Controller
         // Atribuindo valores ao Servico
         $s->nome = request('nome');
         $s->descricao = request('descricao');
+        $s->CEP = request('CEP');
         $s->endereco = request('endereco'). ' '. request('numero'). ' ' . request('complemento');
         $s->horaInicial = request('data').' '.request('horaInicial').':00';
         $s->horaFinal = request('data').' '.request('horaFinal').':00';

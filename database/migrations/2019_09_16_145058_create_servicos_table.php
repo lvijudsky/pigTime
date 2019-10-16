@@ -18,7 +18,12 @@ class CreateServicosTable extends Migration
             $table->timestamps();
             $table->string('nome');
             $table->longText('descricao');
+            $table->string('CEP');
             $table->string('endereco');
+            $table->string('numero');
+            $table->string('complemento')->nullable();
+            $table->string('bairro');
+            $table->string('UF');
             $table->dateTime('horaInicial');
             $table->dateTime('horaFinal');
             $table->string('id_dono');

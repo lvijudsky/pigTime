@@ -66,7 +66,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-search"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="CEP" maxlength="9" />
+                                <input type="text" class="form-control" name="CEP" id="CEP" maxlength="9" />
                                 </div>
                             </div>
                             {{-- ENDERECO SERVICO --}}
