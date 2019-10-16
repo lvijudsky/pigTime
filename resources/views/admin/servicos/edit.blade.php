@@ -78,7 +78,7 @@
                                             <i class="ti-home"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control @error('endereco') is-invalid @enderror " id="endereco" name="endereco"  placeholder="Av, Rua..." readonly>
+                                    <input type="text" class="form-control @error('endereco') is-invalid @enderror " id="endereco" name="endereco" value="{{ $servico->endereco }}"  placeholder="Av, Rua..." readonly>
                                     @error('endereco')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -95,7 +95,7 @@
                                             <i class="ti-home"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" id="numero" name="numero" placeholder="N°">
+                                    <input type="text" class="form-control" id="numero" name="numero" value="{{ $servico->numero }}" placeholder="N°">
                                 </div>
                             </div>
                             {{-- COMPLEMENTO --}}
@@ -107,7 +107,7 @@
                                             <i class="ti-home"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Ap, BL, Cj...">
+                                    <input type="text" class="form-control" id="complemento" name="complemento" value="{{ $servico->complemento }}" placeholder="Ap, BL, Cj...">
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-home"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="bairro" readonly />
+                                <input type="text" class="form-control" name="bairro" id="bairro" value="{{ $servico->bairro }}" readonly />
                             </div>
                         </div>
                         <div class="col-4">
@@ -127,7 +127,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-map-signs"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="UF" readonly />
+                                <input type="text" class="form-control" id="UF" name="UF" value="{{ $servico->UF }}" readonly />
                             </div>
                         </div>
                         <div class="form-group row">
