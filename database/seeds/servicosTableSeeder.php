@@ -20,7 +20,7 @@ class servicosTableSeeder extends Seeder
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
         $s->bairro = 'Consoloção';
-        $s->UF = 'SP';
+        $s->cidade = 'São Paulo';
         $s->complemento = 'Ap 64';
         $s->horaInicial = '2019-10-09 11:20:00';
         $s->horaFinal = '2019-10-09 12:20:00';
@@ -38,7 +38,7 @@ class servicosTableSeeder extends Seeder
         $s->endereco = 'Rua Frei Caneca';
         $s->numero = '444';
         $s->bairro = 'Consoloção';
-        $s->UF = 'SP';
+        $s->cidade = 'São Paulo';
         $s->complemento = 'Ap 64';
         $s->horaInicial = '2019-10-09 11:20:00';
         $s->horaFinal = '2019-10-09 12:20:00';

@@ -22,6 +22,7 @@
                     <form class="form p-t-20" action="/servicos" method="post">
                         {{-- METODO PARA MANDAR AO SERVIDOR --}}
                         @csrf
+                        @method('put')
                         <div class="form-group-row">
                             {{-- NOME SERVICO --}}
                             <div class="col-sm-6">
@@ -121,19 +122,20 @@
                                 <input type="text" class="form-control" name="bairro" id="bairro" value="{{ $servico->bairro }}" readonly />
                             </div>
                         </div>
+                        {{-- CIDADE --}}
                         <div class="col-4">
-                            <label for="UF">UF</label>
+                            <label for="cidade">Cidade</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-map-signs"></i></div>
                                 </div>
-                                <input type="text" class="form-control" id="UF" name="UF" value="{{ $servico->UF }}" readonly />
+                                <input type="text" class="form-control" id="cidade" name="cidade" value="{{ $servico->cidade }}" readonly />
                             </div>
                         </div>
                         <div class="form-group row">
                             {{-- DATA --}}
-                            <div class="col-sm-6">
-                                    <label for="data">DATA:</label>
+                            <div class="col-sm-4">
+                                    <label for="data">Data:</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">
@@ -149,7 +151,7 @@
                                     </div>
                                 </div>
                             {{-- HORARIO INICIO --}}
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <label for="horaInicial">Horário de início:</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -165,7 +167,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 {{-- HORARIO FINAL --}}
                                 <label for="horaFinal">Horário de término:</label>
                                 <div class="input-group">
@@ -187,10 +189,15 @@
                             <input type="hidden" name="id_dono" id="id_dono" value="{{ Auth::user()->id }}">
                     
                         <div class="form-group">
-                            <button type="submit" name="anunciar" class="btn btn-success waves-effect waves-light m-r-10">Anunciar</button>
-                            <button type="submit" name="cancelar" class="btn btn-inverse waves-effect waves-light">Cancelar</button>
-                        </div>
+                            <button type="submit" name="anunciar" class="btn btn-success waves-effect waves-light m-r-10">Atualizar</button>
+                            <button type="reset" name="cancelar" class="btn btn-inverse waves-effect waves-light m-r-10">Cancelar</button>
                     </form>
+                        <form action="/servicos/{{ $servico->id }}" method="post">
+                            @method('delete')
+                            @csrf
+                            <button type="submit" class="btn btn-danger waves-effect waves-light">Remover</button>    
+                        </form>
+                        </div>
                 </div>
             </div>
         </div>

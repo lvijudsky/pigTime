@@ -38,18 +38,30 @@
                 </div>
                 {{-- CORPO DO CARD --}}
                 <div class="card-body weather-small">
-                    {{-- NOME DO USUARIO --}}
-                    <h5 class="card-title">{{ $s->dono . ' ' . $s->donoSobrenome }} </h5>
+                    <div class="row d-flex m-b-10">
+                        {{-- FOTO DO USUARIO --}}
+                        <img src="http://localhost:8000/admin/assets/images/users/1.jpg" alt="user" class="m-l-20" style="width: 50px; border-radius: 100%;">
+                        {{-- NOME DO USUARIO --}}
+                        <h5 class="my-0 py-0 m-l-10 card-title align-self-center">{{ $s->dono . ' ' . $s->donoSobrenome }} </h5>
+                    </div>
                     {{-- DESCRICAO DETALHADA --}}
                     <p class="card-text">{{ Str::limit($s->descricao, $limit=60, $end = '...')}}</p>
-                    {{-- HORARIO / DISTANCIA / PAGAMENTO --}}
+                    {{-- DATA / HORARIO / DISTANCIA / --}}
                     <div class="row">
-                        <div class="col-8 b-r align-self-center">
+                        {{-- CAMPO DATA --}}
+                        <div class="col-4 b-r text-center">
+                            <h1 class="font-light text-info m-b-0 m-r-10">
+                                <small>{{ $s->horaInicial->format('d/m') }}</small>
+                            </h1>
+                            <small>Data</small>
+                        </div>
+                        {{-- CAMPO HORAS --}}
+                        <div class="col-4 b-r align-self-center">
                             <div class="d-flex">
                                 <div class="display-6 text-info"><i class="far fa-clock"></i></div>
-                                    <div class="m-l-20">
+                                    <div class="m-l-0">
                                         {{-- HORARIO --}}
-                                        <h1 class="font-light text-info m-b-0">{{ $s->horaInicial->format('H:i') }}<sup>h</sup></h1>
+                                        <h1 class="font-light text-info m-b-0">{{ $s->horaInicial->format('H:i') }}<small>h</small></h1>
                                         {{-- PAGAMENTO --}}
                                         <small>Pagamento {{ $s->horaFinal->diffInHours($s->horaInicial)}} h</small>
                                 </div>
@@ -57,7 +69,7 @@
                         </div>
                         {{-- DISTANCIA --}}
                         <div class="col-4 text-center">
-                            <h1 class="font-light m-b-0">13<sup>KM</sup></h1>
+                            <h1 class="font-light text-info m-b-0">13<small>km</small></h1>
                             <small>Distância</small>
                         </div>
                     </div>

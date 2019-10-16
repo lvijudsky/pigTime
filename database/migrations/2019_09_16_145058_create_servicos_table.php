@@ -23,7 +23,7 @@ class CreateServicosTable extends Migration
             $table->string('numero');
             $table->string('complemento')->nullable();
             $table->string('bairro');
-            $table->string('UF');
+            $table->string('cidade');
             $table->dateTime('horaInicial');
             $table->dateTime('horaFinal');
             $table->string('id_dono');

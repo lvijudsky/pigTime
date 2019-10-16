@@ -158,7 +158,11 @@ class ServicosController extends Controller
         $s->nome = request('nome');
         $s->descricao = request('descricao');
         $s->CEP = request('CEP');
-        $s->endereco = request('endereco'). ' '. request('numero'). ' ' . request('complemento');
+        $s->endereco = request('endereco');
+        $s->numero = request('numero');
+        $s->complemento = request('complemento');
+        $s->bairro = request('bairro');
+        $s->cidade = request('cidade');
         $s->horaInicial = request('data').' '.request('horaInicial').':00';
         $s->horaFinal = request('data').' '.request('horaFinal').':00';
         $s->id_dono = request('id_dono');

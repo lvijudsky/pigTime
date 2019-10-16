@@ -2,7 +2,7 @@
 const cepInput = document.querySelector('#CEP');
 const ruaInput = document.querySelector('#endereco');
 const bairroInput = document.querySelector('#bairro');
-const ufInput = document.querySelector('#UF')
+const cidadeInput = document.querySelector('#cidade')
 
 
 // Funções
@@ -19,7 +19,7 @@ const buscaCep = (evento) => {
     .then((dados) => {
         ruaInput.value = dados.logradouro;
         bairroInput.value = dados.bairro;
-        ufInput.value = dados.uf;
+        cidadeInput.value = dados.localidade;
         cepInput.value = dados.cep;
     })
 }
