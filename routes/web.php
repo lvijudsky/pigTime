@@ -36,3 +36,7 @@ Route::get('/login', function() {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/p/{id}', function($id){
+    return view("pessoa");
+});
